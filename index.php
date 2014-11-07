@@ -1,11 +1,10 @@
 <?php
 
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * alexis work-test
  */
 
+//login API
 $request['act'] = 'login' ; 
 $request['email'] = 'apitest@ipayoptions.com'; 
 $request['password']  = '1q2w3e4r5t6y'; 
@@ -29,7 +28,7 @@ echo "loginid: ".$response['data']['loginid']. '<br /><br />';
 //Pass: 1q2w3e4r5t6y
 //URL: http://txfunds.uat.ipayoptions.com/
 
-//user check details
+//usercheck API
 $request['act'] = 'usercheck' ; 
 $request['mobile'] = '1221212121112'; 
 $request['country'] = 'AU'; 
@@ -41,6 +40,7 @@ $opts[CURLOPT_RETURNTRANSFER] = true; curl_setopt_array($ch,$opts);
 $response = curl_exec($ch); 
 $response = json_decode($response,1); 
 
+//user check details
 $details = serialize($response);
 echo $details . '<br /><br />';
 echo "status:" .$response['status'] . '<br />';
