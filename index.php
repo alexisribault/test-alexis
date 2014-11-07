@@ -4,6 +4,11 @@
  * alexis work-test
  */
 
+//User: apitest@ipayoptions.com
+//Pass: 1q2w3e4r5t6y
+//URL: http://txfunds.uat.ipayoptions.com/api.php
+
+
 //login API
 $request['act'] = 'login' ; 
 $request['email'] = 'apitest@ipayoptions.com'; 
@@ -24,9 +29,6 @@ echo "firstname:" .$response['data']['firstname'] . '<br />';
 echo "lastname:" .$response['data']['lastname'] . '<br />';
 echo "loginid: ".$response['data']['loginid']. '<br /><br />';
 
-//[10:46:36 AM] Andre Gelderblom: User: apitest@ipayoptions.com
-//Pass: 1q2w3e4r5t6y
-//URL: http://txfunds.uat.ipayoptions.com/
 
 //usercheck API
 $request['act'] = 'usercheck' ; 
