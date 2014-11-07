@@ -15,7 +15,7 @@ $opts[CURLOPT_RETURNTRANSFER] = true; curl_setopt_array($ch,$opts);
 $response = curl_exec($ch); 
 $response = json_decode($response,1); 
 
-//print_response($response) ;
+//login details
 $details = serialize($response);
 echo $details . '<br /><br />';
 echo "status:" .$response['status'] . '<br />';
@@ -29,6 +29,7 @@ echo "loginid: ".$response['data']['loginid']. '<br /><br />';
 //Pass: 1q2w3e4r5t6y
 //URL: http://txfunds.uat.ipayoptions.com/
 
+//user check details
 $request['act'] = 'usercheck' ; 
 $request['mobile'] = '1221212121112'; 
 $request['country'] = 'AU'; 
